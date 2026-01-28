@@ -1,15 +1,15 @@
 :root {
-  /* Ciepła, przyjazna paleta kolorów */
-  --color-primary: #e85d04;
-  --color-primary-dark: #dc2f02;
-  --color-secondary: #f48c06;
-  --color-accent: #faa307;
-  --color-bg: #fffcf7;
-  --color-bg-alt: #fff5e6;
-  --color-text: #1a1a1a;
-  --color-text-light: #4a4a4a;
-  --color-border: #e8d5c4;
-  
+  /* Ciepła, spójna paleta (modern & friendly) */
+  --color-primary: #6b8f71;        /* stonowana zieleń */
+  --color-primary-dark: #4f6f52;   /* ciemniejsza zieleń */
+  --color-secondary: #e07a5f;      /* ciepły koral */
+  --color-accent: #f2a65a;         /* złamany bursztyn */
+  --color-bg: #fdfbf7;             /* bardzo jasne tło */
+  --color-bg-alt: #f7efe5;         /* alternatywne tło / sekcje */
+  --color-text: #2b2b2b;           /* miękka czerń */
+  --color-text-light: #5f5f5f;     /* tekst pomocniczy */
+  --color-border: #e4d8c9;         /* delikatne obramowania */
+
   /* Typografia */
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
