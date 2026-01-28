@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout
@@ -179,29 +180,69 @@ import Layout from "../layouts/Layout.astro";
 
       <div class="gallery-grid">
         <div class="gallery-item">
-            <img class="placeholder-image " src="/images/koncert.jpg" alt="Koncert w szkole" />
+          <div class="gallery-image-wrapper">
+            <Image
+              width={800}
+              height={600}
+              src="/images/koncert.jpg"
+              alt="Koncert w szkole"
+            />
+          </div>
           <p>Koncert w szkole</p>
         </div>
         <div class="gallery-item">
-          <div class="gallery-image">
-            <img class="placeholder-image " src="/images/bajka.jpg" alt="Muzyczna bajka" />
+          <div class="gallery-image-wrapper">
+            <Image
+              width={800}
+              height={600}
+              src="/images/bajka.jpg"
+              alt="Muzyczna bajka"
+            />
           </div>
           <p>Muzyczna bajka</p>
         </div>
         <div class="gallery-item">
-            <img class="placeholder-image " src="/images/festyn.jpg" alt="Festyn szkolny" />
+          <div class="gallery-image-wrapper">
+            <Image
+              width={800}
+              height={600}
+              src="/images/festyn.jpg"
+              alt="Festyn szkolny"
+            />
+          </div>
           <p>Festyn szkolny</p>
         </div>
         <div class="gallery-item">
-            <img class="placeholder-image " src="/images/integracja.jpg" alt="Impreza integracyjna" />
+          <div class="gallery-image-wrapper">
+            <Image
+              width={800}
+              height={600}
+              src="/images/integracja.jpg"
+              alt="Impreza integracyjna"
+            />
+          </div>
           <p>Impreza integracyjna</p>
         </div>
         <div class="gallery-item">
-            <img class="placeholder-image " src="/images/przedszkole-wspolpraca.jpg" alt="Występ dla przedszkolaków" />
+          <div class="gallery-image-wrapper">
+            <Image
+              width={800}
+              height={600}
+              src="/images/przedszkole-wspolpraca.jpg"
+              alt="Występ dla przedszkolaków"
+            />
+          </div>
           <p>Występ dla przedszkolaków</p>
         </div>
         <div class="gallery-item">
-            <img class="placeholder-image " src="/images/zajecia-manualne.jpg" alt="Zajęcia manualne" />
+          <div class="gallery-image-wrapper">
+            <Image
+              width={800}
+              height={600}
+              src="/images/zajecia-manualne.jpg"
+              alt="Zajęcia manualne"
+            />
+          </div>
           <p>Zajęcia manualne</p>
         </div>
       </div>
@@ -669,6 +710,17 @@ import Layout from "../layouts/Layout.astro";
 
   .gallery-item .placeholder-image.large {
     height: 350px;
+  }
+
+  .gallery-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3; /* ustalasz proporcje wszystkich obrazków */
+    overflow: hidden;
+  }
+
+    .gallery-image-wrapper img{
+  height: 100%;
   }
 
   .gallery-item p {
