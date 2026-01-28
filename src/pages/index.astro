@@ -41,15 +41,15 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
       </div>
       <div class="hero-stats">
         <div class="stat-item fade-in" style="animation-delay: 0.2s;">
-          <span class="stat-number">500+</span>
+          <span class="stat-number" data-target="500">0</span>
           <span class="stat-label">Imprez</span>
         </div>
         <div class="stat-item fade-in" style="animation-delay: 0.4s;">
-          <span class="stat-number">1000+</span>
+          <span class="stat-number" data-target="1000">0</span>
           <span class="stat-label">Występów</span>
         </div>
         <div class="stat-item fade-in" style="animation-delay: 0.6s;">
-          <span class="stat-number">50K+</span>
+          <span class="stat-number" data-target="50000">0</span>
           <span class="stat-label">Widzów</span>
         </div>
       </div>
@@ -1010,6 +1010,58 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
 </style>
 
 <script>
+  // Animacja liczb
+  const animateNumbers = () => {
+    const statNumbers = document.querySelectorAll(".stat-number[data-target]");
+    
+    statNumbers.forEach((element) => {
+      const target = parseInt(element.getAttribute("data-target") || "0");
+      let current = 0;
+      const increment = target / 50;
+      const duration = 1500;
+      const stepTime = duration / 50;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+          if (target === 50000) {
+            element.textContent = "50K+";
+          } else {
+            element.textContent = current.toLocaleString() + "+";
+          }
+        } else {
+          if (target === 50000) {
+            element.textContent = Math.floor(current / 1000) + "K+";
+          } else {
+            element.textContent = Math.floor(current).toLocaleString() + "+";
+          }
+        }
+      }, stepTime);
+    });
+  };
+
+  // Trigger animacji gdy sekcja jest widoczna
+  const observerOptions = {
+    threshold: 0.5,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateNumbers();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const heroStats = document.querySelector(".hero-stats");
+  if (heroStats) {
+    observer.observe(heroStats);
+  }
+
+  // Kontakt formularz
   const form = document.querySelector(
     ".contact-form",
   ) as HTMLFormElement | null;
