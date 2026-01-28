@@ -94,7 +94,7 @@ img {
 }
 
 section {
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-sm);
 }
 
 .container {
