@@ -972,6 +972,18 @@ import { Image } from "astro:assets";
     .form-row {
       grid-template-columns: 1fr;
     }
+    .contact-item {
+    flex-direction: column;
+    gap: 0.25rem; /* mniejszy odstęp w kolumnie */
+  }
+
+  .contact-item span.contact-icon {
+    font-size: 1.8rem;
+  }
+
+  .contact-item div {
+    word-break: break-word; /* długie numery czy emaile nie wyjdą poza box */
+  }
   }
 </style>
 
