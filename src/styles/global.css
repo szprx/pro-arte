@@ -1,22 +1,22 @@
 :root {
   /* Ciepła, spójna paleta (modern & friendly) */
-  --color-primary: #8fcfb4;
+  --color-primary: #75b89f;
   /* pastelowa zieleń */
-  --color-primary-dark: #6fb39a;
+  --color-primary-dark: #5a9b87;
   /* szałwiowa zieleń */
-  --color-secondary: #f1b8a1;
+  --color-secondary: #e8a484;
   /* delikatna morela */
-  --color-accent: #e6a86f;
+  --color-accent: #d99a57;
   /* ciepły piasek */
-  --color-bg: #f9fdfb;
+  --color-bg: #f0f5f2;
   /* prawie białe, świeże */
-  --color-bg-alt: #eef7f3;
+  --color-bg-alt: #e5eff0;
   /* sekcje / karty */
-  --color-text: #243430;
+  --color-text: #1a2622;
   /* miękka, zielonkawa czerń */
-  --color-text-light: #5f7a70;
+  --color-text-light: #4d6859;
   /* stonowany opis */
-  --color-border: #d6ebe2;
+  --color-border: #c7e0d5;
   /* bardzo delikatne borderki */
 
   /* Typografia */
