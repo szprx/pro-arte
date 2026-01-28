@@ -1,31 +1,40 @@
 :root {
   /* Ciepła, spójna paleta (modern & friendly) */
-  --color-primary: #8fcfb4;        /* pastelowa zieleń */
-  --color-primary-dark: #6fb39a;   /* szałwiowa zieleń */
-  --color-secondary: #f1b8a1;      /* delikatna morela */
-  --color-accent: #e6a86f;         /* ciepły piasek */
-  --color-bg: #f9fdfb;             /* prawie białe, świeże */
-  --color-bg-alt: #eef7f3;         /* sekcje / karty */
-  --color-text: #243430;           /* miękka, zielonkawa czerń */
-  --color-text-light: #5f7a70;     /* stonowany opis */
-  --color-border: #d6ebe2;         /* bardzo delikatne borderki */
+  --color-primary: #8fcfb4;
+  /* pastelowa zieleń */
+  --color-primary-dark: #6fb39a;
+  /* szałwiowa zieleń */
+  --color-secondary: #f1b8a1;
+  /* delikatna morela */
+  --color-accent: #e6a86f;
+  /* ciepły piasek */
+  --color-bg: #f9fdfb;
+  /* prawie białe, świeże */
+  --color-bg-alt: #eef7f3;
+  /* sekcje / karty */
+  --color-text: #243430;
+  /* miękka, zielonkawa czerń */
+  --color-text-light: #5f7a70;
+  /* stonowany opis */
+  --color-border: #d6ebe2;
+  /* bardzo delikatne borderki */
 
   /* Typografia */
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  
+
   /* Odstępy */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
-  
+
   /* Cienie */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
-  
+
   /* Radiusy */
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -50,7 +59,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
@@ -146,6 +160,7 @@ section {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -156,6 +171,7 @@ section {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -174,7 +190,7 @@ section {
   section {
     padding: var(--spacing-lg) var(--spacing-sm);
   }
-  
+
   .container {
     padding: 0 var(--spacing-sm);
   }
