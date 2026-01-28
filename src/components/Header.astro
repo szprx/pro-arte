@@ -1,0 +1,165 @@
+---
+---
+
+<header class="header">
+  <nav class="nav container">
+    <a href="/" class="logo">
+      <span class="logo-icon">🎵</span>
+      <span class="logo-text">Koncerty dla Szkół</span>
+    </a>
+    
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="nav-links">
+      <li><a href="#oferta">Oferta</a></li>
+      <li><a href="#artyści">Artyści</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#cennik">Cennik</a></li>
+      <li><a href="#kontakt" class="btn btn-primary">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 252, 247, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem var(--spacing-md);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+    color: var(--color-text);
+  }
+  
+  .logo-icon {
+    font-size: 2rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-links a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:not(.btn):hover::after {
+    width: 100%;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--color-text);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-bg);
+      flex-direction: column;
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .nav-links a.btn {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  menuToggle?.addEventListener('click', () => {
+    navLinks?.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+  
+  // Close menu when clicking on a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks?.classList.remove('active');
+      menuToggle?.classList.remove('active');
+    });
+  });
+</script>

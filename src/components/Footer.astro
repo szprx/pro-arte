@@ -1,0 +1,138 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Koncerty dla Szkół</h3>
+        <p>Dostarczamy niezapomniane wrażenia muzyczne dla młodych ludzi od 2015 roku.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Szybkie linki</h4>
+        <ul>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#artyści">Artyści</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#cennik">Cennik</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Kontakt</h4>
+        <ul>
+          <li>📧 kontakt@koncerty.pl</li>
+          <li>📱 +48 123 456 789</li>
+          <li>📍 Warszawa, Polska</li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Media społecznościowe</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Koncerty dla Szkół. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+    margin-top: var(--spacing-xl);
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .footer-section h3 {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-section h4 {
+    color: #ffffff;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+  }
+  
+  .footer-section p {
+    color: #cccccc;
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+  }
+  
+  .footer-section a {
+    color: #cccccc;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: var(--color-accent);
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: var(--spacing-sm);
+  }
+  
+  .social-links a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    background: var(--color-primary);
+    transform: translateY(-3px);
+    color: white;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-bottom p {
+    color: #999999;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+  }
+</style>

@@ -1,11 +1,879 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Koncerty dla Szkół - Edukacja przez Muzykę">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="container hero-content">
+      <div class="hero-text fade-in-up">
+        <h1>Muzyka, która inspiruje młode pokolenie</h1>
+        <p class="hero-subtitle">
+          Organizujemy profesjonalne koncerty edukacyjne, które łączą rozrywkę z nauką. 
+          Ponad 500 szkół w całej Polsce zaufało nam w ostatnich latach.
+        </p>
+        <div class="hero-buttons">
+          <a href="#oferta" class="btn btn-primary">Zobacz ofertę</a>
+          <a href="#kontakt" class="btn btn-secondary">Skontaktuj się</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item fade-in" style="animation-delay: 0.2s;">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Szkół</span>
+        </div>
+        <div class="stat-item fade-in" style="animation-delay: 0.4s;">
+          <span class="stat-number">1000+</span>
+          <span class="stat-label">Koncertów</span>
+        </div>
+        <div class="stat-item fade-in" style="animation-delay: 0.6s;">
+          <span class="stat-number">50K+</span>
+          <span class="stat-label">Uczniów</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oferta Section -->
+  <section id="oferta" class="oferta">
+    <div class="container">
+      <h2 class="section-title">Nasza Oferta</h2>
+      <p class="section-subtitle">
+        Różnorodne programy muzyczne dostosowane do wieku i potrzeb uczniów
+      </p>
+      
+      <div class="offer-grid">
+        <div class="offer-card">
+          <div class="offer-icon">🎸</div>
+          <h3>Koncerty Rockowe</h3>
+          <p>
+            Energetyczne koncerty z największymi hitami rocka. Idealne dla uczniów szkół 
+            średnich, którzy chcą poznać historię muzyki rockowej.
+          </p>
+          <ul class="offer-features">
+            <li>✓ Czas trwania: 60-90 min</li>
+            <li>✓ Interaktywna forma</li>
+            <li>✓ Historia muzyki</li>
+            <li>✓ Nauka przez zabawę</li>
+          </ul>
+        </div>
+        
+        <div class="offer-card featured">
+          <div class="badge">Najpopularniejsze</div>
+          <div class="offer-icon">🎵</div>
+          <h3>Koncerty Klasyczne</h3>
+          <p>
+            Profesjonalne wykonania największych dzieł muzyki klasycznej przez 
+            doświadczonych muzyków. Edukacja muzyczna na najwyższym poziomie.
+          </p>
+          <ul class="offer-features">
+            <li>✓ Czas trwania: 45-60 min</li>
+            <li>✓ Omówienie utworów</li>
+            <li>✓ Q&A z artystami</li>
+            <li>✓ Materiały edukacyjne</li>
+          </ul>
+        </div>
+        
+        <div class="offer-card">
+          <div class="offer-icon">🎤</div>
+          <h3>Koncerty Tematyczne</h3>
+          <p>
+            Specjalne programy tematyczne - od muzyki filmowej, przez jazz, 
+            po współczesny pop. Dopasowane do programu nauczania.
+          </p>
+          <ul class="offer-features">
+            <li>✓ Czas trwania: 60 min</li>
+            <li>✓ Różne tematyki</li>
+            <li>✓ Warsztaty opcjonalne</li>
+            <li>✓ Elastyczny program</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artyści Section -->
+  <section id="artyści" class="artysci">
+    <div class="container">
+      <h2 class="section-title">Nasi Artyści</h2>
+      <p class="section-subtitle">
+        Współpracujemy z najlepszymi muzykami i pedagogami muzycznymi
+      </p>
+      
+      <div class="artists-grid">
+        <div class="artist-card">
+          <div class="artist-image">
+            <div class="placeholder-image">🎹</div>
+          </div>
+          <h3>Anna Kowalska</h3>
+          <p class="artist-role">Pianistka, Pedagog</p>
+          <p>
+            Absolwentka UMFC w Warszawie. Specjalizuje się w muzyce klasycznej 
+            i edukacji muzycznej dzieci i młodzieży. 15 lat doświadczenia.
+          </p>
+        </div>
+        
+        <div class="artist-card">
+          <div class="artist-image">
+            <div class="placeholder-image">🎸</div>
+          </div>
+          <h3>Marek Nowak</h3>
+          <p class="artist-role">Gitarzysta, Kompozytor</p>
+          <p>
+            Wieloletni muzyk sesyjny i pedagog. Prowadzi warsztaty gitarowe 
+            i koncerty rockowe dla młodzieży w całej Polsce.
+          </p>
+        </div>
+        
+        <div class="artist-card">
+          <div class="artist-image">
+            <div class="placeholder-image">🎻</div>
+          </div>
+          <h3>Katarzyna Wiśniewska</h3>
+          <p class="artist-role">Skrzypaczka, Dyrygent</p>
+          <p>
+            Laureatka międzynarodowych konkursów skrzypcowych. Prowadzi 
+            koncerty edukacyjne prezentujące piękno muzyki kameralnej.
+          </p>
+        </div>
+        
+        <div class="artist-card">
+          <div class="artist-image">
+            <div class="placeholder-image">🥁</div>
+          </div>
+          <h3>Piotr Zieliński</h3>
+          <p class="artist-role">Perkusista, Wokalista</p>
+          <p>
+            Specjalista od muzyki rozrywkowej i popowej. Prowadzi interaktywne 
+            koncerty pokazujące różnorodność stylów muzycznych.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria Section -->
+  <section id="galeria" class="galeria">
+    <div class="container">
+      <h2 class="section-title">Galeria</h2>
+      <p class="section-subtitle">
+        Zobacz jak wyglądają nasze koncerty
+      </p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="placeholder-image large">📸</div>
+          <p>Koncert w Warszawie</p>
+        </div>
+        <div class="gallery-item">
+          <div class="placeholder-image">📸</div>
+          <p>Warsztaty muzyczne</p>
+        </div>
+        <div class="gallery-item">
+          <div class="placeholder-image">📸</div>
+          <p>Występ w Krakowie</p>
+        </div>
+        <div class="gallery-item">
+          <div class="placeholder-image large">📸</div>
+          <p>Koncert rockowy</p>
+        </div>
+        <div class="gallery-item">
+          <div class="placeholder-image">📸</div>
+          <p>Występ klasyczny</p>
+        </div>
+        <div class="gallery-item">
+          <div class="placeholder-image">📸</div>
+          <p>Spotkanie z artystami</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cennik Section -->
+  <section id="cennik" class="cennik">
+    <div class="container">
+      <h2 class="section-title">Cennik</h2>
+      <p class="section-subtitle">
+        Przejrzyste ceny dostosowane do Twojego budżetu
+      </p>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Pakiet Podstawowy</h3>
+            <div class="price">
+              <span class="price-amount">1500</span>
+              <span class="price-currency">zł</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li>✓ Koncert 45-60 minut</li>
+            <li>✓ Do 100 uczniów</li>
+            <li>✓ 2-3 artystów</li>
+            <li>✓ Nagłośnienie podstawowe</li>
+            <li>✓ Krótkie wprowadzenie</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-secondary">Wybierz pakiet</a>
+        </div>
+        
+        <div class="pricing-card featured">
+          <div class="badge">Polecamy</div>
+          <div class="pricing-header">
+            <h3>Pakiet Rozszerzony</h3>
+            <div class="price">
+              <span class="price-amount">2500</span>
+              <span class="price-currency">zł</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li>✓ Koncert 60-90 minut</li>
+            <li>✓ Do 200 uczniów</li>
+            <li>✓ 4-5 artystów</li>
+            <li>✓ Profesjonalne nagłośnienie</li>
+            <li>✓ Prezentacja multimedialna</li>
+            <li>✓ Q&A z artystami</li>
+            <li>✓ Materiały edukacyjne</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-primary">Wybierz pakiet</a>
+        </div>
+        
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Pakiet Premium</h3>
+            <div class="price">
+              <span class="price-amount">4000</span>
+              <span class="price-currency">zł</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li>✓ Koncert 90-120 minut</li>
+            <li>✓ Bez limitu uczniów</li>
+            <li>✓ 6+ artystów</li>
+            <li>✓ Nagłośnienie koncertowe</li>
+            <li>✓ Pełna oprawa multimedialna</li>
+            <li>✓ Warsztaty dodatkowe</li>
+            <li>✓ Materiały + nagranie</li>
+            <li>✓ Foto i wideo relacja</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-secondary">Wybierz pakiet</a>
+        </div>
+      </div>
+      
+      <div class="pricing-note">
+        <p>💡 <strong>Uwaga:</strong> Ceny są orientacyjne i mogą się różnić w zależności od lokalizacji, 
+        rodzaju koncertu i dodatkowych wymagań. Skontaktuj się z nami, aby otrzymać indywidualną wycenę.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt Section -->
+  <section id="kontakt" class="kontakt">
+    <div class="container">
+      <h2 class="section-title">Skontaktuj się z nami</h2>
+      <p class="section-subtitle">
+        Chętnie odpowiemy na wszystkie pytania i przygotujemy ofertę
+      </p>
+      
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3>Dane kontaktowe</h3>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <p>kontakt@koncerty.pl</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div>
+              <strong>Telefon</strong>
+              <p>+48 123 456 789</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Adres</strong>
+              <p>ul. Muzyczna 15<br>00-001 Warszawa</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">⏰</span>
+            <div>
+              <strong>Godziny pracy</strong>
+              <p>Pn-Pt: 9:00 - 17:00</p>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Imię i nazwisko *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="school">Nazwa szkoły *</label>
+            <input type="text" id="school" name="school" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="concert-type">Rodzaj koncertu</label>
+            <select id="concert-type" name="concert-type">
+              <option value="">Wybierz...</option>
+              <option value="rock">Koncert rockowy</option>
+              <option value="classical">Koncert klasyczny</option>
+              <option value="thematic">Koncert tematyczny</option>
+              <option value="other">Inne</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Wiadomość *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  }
+  
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .hero-text {
+    max-width: 700px;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .hero h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .hero-buttons .btn-secondary {
+    background: white;
+    color: var(--color-primary);
+    border: none;
+  }
+  
+  .hero-buttons .btn-secondary:hover {
+    background: var(--color-bg);
+    color: var(--color-primary);
+  }
+  
+  .hero-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-md);
+    min-width: 150px;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+  }
+  
+  /* Oferta Section */
+  .oferta {
+    background: var(--color-bg-alt);
+  }
+  
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .offer-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .offer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .offer-card.featured {
+    border: 3px solid var(--color-primary);
+  }
+  
+  .badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .offer-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .offer-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .offer-features {
+    list-style: none;
+    margin-top: var(--spacing-md);
+  }
+  
+  .offer-features li {
+    padding: 0.5rem 0;
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .offer-features li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Artyści Section */
+  .artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .artist-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+  }
+  
+  .artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .artist-image {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .artist-image .placeholder-image {
+    font-size: 6rem;
+  }
+  
+  .artist-card h3 {
+    padding: var(--spacing-sm) var(--spacing-md) 0;
+    color: var(--color-text);
+  }
+  
+  .artist-role {
+    padding: 0 var(--spacing-md);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .artist-card p:last-child {
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+  }
+  
+  /* Galeria Section */
+  .galeria {
+    background: var(--color-bg-alt);
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .gallery-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    background: white;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .gallery-item .placeholder-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+  }
+  
+  .gallery-item .placeholder-image.large {
+    height: 350px;
+  }
+  
+  .gallery-item p {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Cennik Section */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .pricing-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .pricing-card.featured {
+    border: 3px solid var(--color-primary);
+    transform: scale(1.05);
+  }
+  
+  .pricing-card.featured:hover {
+    transform: scale(1.08) translateY(-5px);
+  }
+  
+  .pricing-header {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-border);
+  }
+  
+  .pricing-header h3 {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .price-amount {
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: 1;
+  }
+  
+  .price-currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+  }
+  
+  .pricing-features {
+    list-style: none;
+    flex-grow: 1;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .pricing-features li {
+    padding: 0.75rem 0;
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .pricing-features li:last-child {
+    border-bottom: none;
+  }
+  
+  .pricing-note {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-primary);
+  }
+  
+  .pricing-note p {
+    margin: 0;
+  }
+  
+  /* Kontakt Section */
+  .kontakt {
+    background: var(--color-bg-alt);
+  }
+  
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .contact-info {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    height: fit-content;
+  }
+  
+  .contact-info h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .contact-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .contact-icon {
+    font-size: 2rem;
+  }
+  
+  .contact-item strong {
+    display: block;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+  
+  .contact-item p {
+    margin: 0;
+    color: var(--color-text-light);
+  }
+  
+  .contact-form {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.1);
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .contact-form .btn {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding: var(--spacing-lg) 0;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+      width: 100%;
+    }
+    
+    .hero-stats {
+      justify-content: center;
+    }
+    
+    .offer-grid,
+    .artists-grid,
+    .gallery-grid,
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .pricing-card.featured {
+      transform: none;
+    }
+    
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  // Simple form handling (you'd replace this with actual backend logic)
+  const form = document.querySelector('.contact-form');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Dziękujemy za wiadomość! Skontaktujemy się wkrótce.');
+    form.reset();
+  });
+</script>
