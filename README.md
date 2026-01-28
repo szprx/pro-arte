@@ -1,4 +1,4 @@
-# Koncerty dla Szkół - Strona Internetowa
+# Agencja Artystyczna Pro Arte - Strona Internetowa
 
 Profesjonalna strona internetowa dla firmy organizującej koncerty edukacyjne w szkołach.
 
