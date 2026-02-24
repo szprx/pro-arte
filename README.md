@@ -1,23 +1,21 @@
 # Agencja Artystyczna Pro Arte - Strona Internetowa
 
-Profesjonalna strona internetowa dla firmy organizującej koncerty edukacyjne w szkołach.
+Profesjonalna strona internetowa dla agencji organizującej koncerty edukacyjne w szkołach.
 
-## 🎵 Funkcje
+## Funkcje
 
-- **Responsywny design** - działa świetnie na desktop, tablet i mobile
+- **Responsywny design** - działa na desktop, tablet i mobile
 - **Sekcja Hero** - przyciągająca uwagę z statystykami
 - **Oferta** - trzy rodzaje koncertów z opisami
 - **Artyści** - prezentacja zespołu
-- **Galeria** - miejsce na zdjęcia z koncertów
+- **Galeria** - zdjęcia z koncertów
 - **Cennik** - trzy pakiety cenowe
-- **Kontakt** - formularz kontaktowy i dane firmy
-- **Elegancki design** - ciepła paleta kolorów, ładna typografia
+- **Kontakt** - formularz kontaktowy (Formspree) i dane firmy
 
-## 🚀 Instalacja i uruchomienie
+## Instalacja i uruchomienie
 
 ### Wymagania
 - Node.js 18 lub nowszy
-- npm lub yarn
 
 ### Kroki
 
@@ -41,45 +39,45 @@ npm run build
 
 Pliki gotowe do wdrożenia znajdziesz w folderze `dist/`.
 
-## 📝 Personalizacja
+## Personalizacja
 
 ### Zmiana kolorów
 Edytuj zmienne CSS w `src/styles/global.css`:
 ```css
 :root {
-  --color-primary: #e85d04;    /* Główny kolor */
-  --color-secondary: #f48c06;  /* Kolor pomocniczy */
-  --color-accent: #faa307;     /* Akcent */
+  --color-primary: #75b89f;    /* Zielony pastelowy */
+  --color-secondary: #e8a484;  /* Morelowy */
 }
 ```
 
 ### Zmiana tekstów
-Wszystkie teksty znajdują się w `src/pages/index.astro`. Możesz je łatwo edytować.
+Wszystkie teksty znajdują się w `src/pages/index.astro`.
 
 ### Dodawanie zdjęć
 1. Umieść zdjęcia w folderze `public/images/`
-2. W pliku `index.astro` zamień placeholdery na:
-```html
-<img src="/images/twoje-zdjecie.jpg" alt="Opis">
+2. W pliku `index.astro` użyj komponentu Astro:
+```astro
+import { Image } from 'astro:assets';
+<Image src="/images/twoje-zdjecie.jpg" alt="Opis" width={800} height={600} />
 ```
 
 ### Zmiana czcionek
 Edytuj import w `src/layouts/Layout.astro` i zmienne w `global.css`.
 
-## 📂 Struktura projektu
+## Struktura projektu
 
 ```
-koncerty-dla-szkol/
+pro-arte/
 ├── src/
 │   ├── components/      # Komponenty (Header, Footer)
 │   ├── layouts/         # Layout główny
-│   ├── pages/          # Strony (index.astro)
-│   └── styles/         # Style globalne
-├── public/             # Pliki statyczne (zdjęcia, ikony)
+│   ├── pages/           # Strony (index.astro)
+│   └── styles/          # Style globalne
+├── public/              # Pliki statyczne (zdjęcia, ikony)
 └── package.json
 ```
 
-## 🎨 Sekcje strony
+## Sekcje strony
 
 1. **Hero** - Nagłówek z wezwaniem do działania
 2. **Oferta** - Trzy rodzaje koncertów
@@ -88,34 +86,12 @@ koncerty-dla-szkol/
 5. **Cennik** - Trzy pakiety cenowe
 6. **Kontakt** - Formularz i dane kontaktowe
 
-## 🔧 Dalszy rozwój
+## Wdrożenie
 
-Możesz dodać:
-- Blog z aktualnościami
-- System rezerwacji online
-- Integrację z kalendarzem
-- Referencje i opinie szkół
-- Więcej sekcji z informacjami
+Strona jest wdrożona na GitHub Pages pod adresem `https://szprx.github.io/pro-arte`.
 
-## 📱 Responsywność
-
-Strona jest w pełni responsywna i działa na:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (< 768px)
-
-## 🌐 Hosting
-
-Możesz wdrożyć stronę na:
-- Netlify (darmowy)
-- Vercel (darmowy)
-- GitHub Pages
-- Własny hosting
-
-## 📧 Kontakt
-
-W razie pytań dotyczących strony, skontaktuj się z developerem.
+Deployment odbywa się automatycznie po każdym pushu do gałęzi `master` za pomocą GitHub Actions (`.github/workflows/deploy.yml`).
 
 ---
 
-Stworzone z ❤️ używając Astro
+Stworzone używając [Astro](https://astro.build)
