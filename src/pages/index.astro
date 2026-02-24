@@ -58,6 +58,77 @@ import zajecia from "../assets/images/zajecia-manualne.jpg";
     </div>
   </section>
 
+  <!-- O nas Section -->
+  <section id="o-nas" class="o-nas">
+    <div class="container">
+      <h2 class="section-title">O nas</h2>
+      <p class="section-subtitle">
+        Pasja do muzyki i sztuki, którą dzielimy się z dziećmi od 2017 roku
+      </p>
+
+      <div class="about-wrapper">
+        <div class="about-text">
+          <p>
+            Agencja Artystyczna Pro Arte powstała w 2017 roku z miłości do
+            muzyki i głębokiego przekonania, że sztuka powinna być dostępna
+            dla każdego dziecka. Działamy w Wołominie i okolicznych gminach,
+            organizując występy artystyczne na najwyższym poziomie.
+          </p>
+          <p>
+            Nasz zespół tworzą doświadczeni artyści, muzycy i konferansjerzy,
+            którzy z zaangażowaniem przygotowują programy dostosowane do
+            charakteru każdego wydarzenia – od kameralnych przedstawień dla
+            przedszkolaków po wielkie festyny dla całych społeczności szkolnych.
+          </p>
+          <p>
+            Każde zamówienie traktujemy indywidualnie. Zależy nam, aby
+            Państwa impreza była nie tylko dobrze zorganizowana, ale przede
+            wszystkim niezapomniana.
+          </p>
+        </div>
+
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div>
+              <h3>Pasja</h3>
+              <p>
+                Kochamy to, co robimy. Każdy występ to dla nas nowe,
+                wyjątkowe przeżycie, które staramy się przekazać publiczności.
+              </p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div>
+              <h3>Jakość</h3>
+              <p>
+                Profesjonalizm i wysoka jakość artystyczna to nasze
+                priorytety. Dbamy o każdy szczegół scenariusza i wykonania.
+              </p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div>
+              <h3>Zaangażowanie</h3>
+              <p>
+                Wierzymy, że kontakt z publicznością to fundament dobrego
+                występu. Wciągamy widzów w świat muzyki i zabawy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Oferta Section -->
   <section id="oferta" class="oferta">
     <div class="container">
@@ -174,6 +245,64 @@ import zajecia from "../assets/images/zajecia-manualne.jpg";
             Kreatywni twórcy, którzy przygotowują oryginalne i zaskakujące
             scenariusze dostosowane do charakteru wydarzenia.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opinie Section -->
+  <section id="opinie" class="opinie">
+    <div class="container">
+      <h2 class="section-title">Opinie</h2>
+      <p class="section-subtitle">
+        Co mówią o nas szkoły, przedszkola i organizatorzy
+      </p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p>
+            Koncert autorski dla naszych uczniów był niesamowitym przeżyciem.
+            Dzieci były zachwycone, a my – pod wrażeniem profesjonalizmu
+            całego zespołu. Gorąco polecamy Agencję Pro Arte każdej placówce!
+          </p>
+          <div class="testimonial-author">
+            <strong>Anna Kowalska</strong>
+            <span>Dyrektor Szkoły Podstawowej nr 3 w Wołominie</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p>
+            Bajka muzyczna zachwyciła nasze przedszkolaki. Kolorowa
+            scenografia, żywa muzyka i świetna interakcja z dziećmi –
+            wszystko na najwyższym poziomie. Na pewno zaprosimy Agencję
+            ponownie w przyszłym roku!
+          </p>
+          <div class="testimonial-author">
+            <strong>Maria Wiśniewska</strong>
+            <span>Kierownik Przedszkola Publicznego w Radzyminie</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p>
+            Festyn szkolny z oprawą Pro Arte przeszedł nasze najśmielsze
+            oczekiwania. Znakomita konferansjerka, energetyczny program i
+            doskonała organizacja. Dziękujemy za niezapomniane chwile!
+          </p>
+          <div class="testimonial-author">
+            <strong>Piotr Nowak</strong>
+            <span>Wicedyrektor SP im. Jana Pawła II w Kobyłce</span>
+          </div>
         </div>
       </div>
     </div>
@@ -424,6 +553,24 @@ import zajecia from "../assets/images/zajecia-manualne.jpg";
               </select>
             </div>
 
+            <div class="form-row">
+              <div class="form-group">
+                <label for="event-date">Data imprezy</label>
+                <input type="date" id="event-date" name="event-date" />
+              </div>
+
+              <div class="form-group">
+                <label for="attendees">Liczba widzów</label>
+                <select id="attendees" name="attendees">
+                  <option value="">Wybierz...</option>
+                  <option value="do-50">do 50 osób</option>
+                  <option value="50-100">50 – 100 osób</option>
+                  <option value="100-200">100 – 200 osób</option>
+                  <option value="200+">powyżej 200 osób</option>
+                </select>
+              </div>
+            </div>
+
             <div class="form-group">
               <label for="message">Wiadomość *</label>
               <textarea id="message" name="message" rows="5" required></textarea>
@@ -436,8 +583,30 @@ import zajecia from "../assets/images/zajecia-manualne.jpg";
           </div>
         </div>
       </div>
+
+      <div class="map-wrapper">
+        <iframe
+          src="https://maps.google.com/maps?q=ul.+Matejki+30,+Wołomin,+Polska&output=embed&hl=pl&z=15"
+          width="100%"
+          height="300"
+          style="border: 0; display: block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Lokalizacja Agencji Artystycznej Pro Arte"
+        ></iframe>
+      </div>
     </div>
   </section>
+
+  <!-- Gallery Lightbox -->
+  <dialog id="gallery-lightbox" class="lightbox" aria-label="Podgląd zdjęcia">
+    <button class="lightbox-close" aria-label="Zamknij podgląd">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </dialog>
 </Layout>
 
 <style>
@@ -961,6 +1130,208 @@ import zajecia from "../assets/images/zajecia-manualne.jpg";
     text-align: center;
   }
 
+  /* O nas Section */
+  .o-nas {
+    background: var(--color-bg);
+  }
+
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .about-values {
+    display: grid;
+    gap: var(--spacing-md);
+  }
+
+  .value-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .value-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .value-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .value-item > div > p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  /* Opinie Section */
+  .opinie {
+    background: var(--color-bg-alt);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .testimonial-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .testimonial-quote {
+    color: var(--color-primary);
+    font-size: 2rem;
+    opacity: 0.35;
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .testimonial-card > p {
+    font-style: italic;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .testimonial-author {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-sm);
+  }
+
+  .testimonial-author strong {
+    display: block;
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  .testimonial-author span {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+  }
+
+  /* Gallery lightbox trigger */
+  .gallery-item {
+    cursor: pointer;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 0;
+    width: min(90vw, 960px);
+    max-height: 90vh;
+    background: #111;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  .lightbox #lightbox-img {
+    width: 100%;
+    max-height: calc(90vh - 3rem);
+    object-fit: contain;
+    display: block;
+  }
+
+  .lightbox-caption {
+    text-align: center;
+    color: #ccc;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 10;
+    transition: background 0.2s;
+  }
+
+  .lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Map */
+  .map-wrapper {
+    margin-top: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Scroll reveal */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.6s ease var(--reveal-delay, 0s),
+      transform 0.6s ease var(--reveal-delay, 0s);
+  }
+
+  .scroll-reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   /* Responsive */
   @media (max-width: 768px) {
     .hero {
@@ -1013,6 +1384,10 @@ import zajecia from "../assets/images/zajecia-manualne.jpg";
 
     .contact-item div {
       word-break: break-word;
+    }
+
+    .about-wrapper {
+      grid-template-columns: 1fr;
     }
   }
 </style>
@@ -1096,6 +1471,78 @@ import zajecia from "../assets/images/zajecia-manualne.jpg";
         alert("Błąd sieci, spróbuj ponownie.");
         console.error(error);
       }
+    });
+  }
+
+  // Scroll reveal
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+    );
+
+    document
+      .querySelectorAll(
+        ".offer-card, .artist-card, .gallery-item, .pricing-card, .testimonial-card, .value-item",
+      )
+      .forEach((el) => {
+        const siblings = Array.from(el.parentElement?.children ?? []);
+        const delay = siblings.indexOf(el) * 0.1;
+        (el as HTMLElement).style.setProperty("--reveal-delay", `${delay}s`);
+        el.classList.add("scroll-reveal");
+        revealObserver.observe(el);
+      });
+  }
+
+  // Gallery lightbox
+  const lightbox = document.getElementById(
+    "gallery-lightbox",
+  ) as HTMLDialogElement | null;
+  const lightboxImg = document.getElementById(
+    "lightbox-img",
+  ) as HTMLImageElement | null;
+  const lightboxCaption = document.getElementById("lightbox-caption");
+
+  if (lightbox && lightboxImg) {
+    document.querySelectorAll(".gallery-item").forEach((item) => {
+      item.setAttribute("tabindex", "0");
+      item.setAttribute("role", "button");
+
+      const openLightbox = () => {
+        const img = item.querySelector("img");
+        const caption = item.querySelector("p");
+        if (img) {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+        }
+        if (lightboxCaption && caption) {
+          lightboxCaption.textContent = caption.textContent;
+        }
+        lightbox.showModal();
+      };
+
+      item.addEventListener("click", openLightbox);
+      item.addEventListener("keydown", (e) => {
+        if ((e as KeyboardEvent).key === "Enter" || (e as KeyboardEvent).key === " ") {
+          e.preventDefault();
+          openLightbox();
+        }
+      });
+    });
+
+    lightbox
+      .querySelector(".lightbox-close")
+      ?.addEventListener("click", () => lightbox.close());
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) lightbox.close();
     });
   }
 </script>
