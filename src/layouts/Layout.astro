@@ -8,8 +8,11 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Profesjonalna oprawa artystyczna imprez" } =
+const { title, description = "Profesjonalna oprawa artystyczna imprez dla dzieci – koncerty, bajki muzyczne, imprezy integracyjne. Działamy od 2017 roku." } =
   Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL("/pro-arte/images/logo.png", Astro.site);
 ---
 
 <!doctype html>
@@ -19,8 +22,17 @@ const { title, description = "Profesjonalna oprawa artystyczna imprez" } =
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="ahrefs-site-verification" content="75caae21d884d1be68d2a32fa6e751d6c5e0ebcb6085937f56f646850afcf0ad">
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <link rel="icon" type="image/png" href="/pro-arte/images/logo.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="pl_PL" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

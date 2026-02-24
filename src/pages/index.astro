@@ -1,17 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import { email, phone, addressStreet, addressCity, addressPostal, hours } from "../data/contact";
 
-import koncert from "../../public/images/koncert.jpg";
-import bajka from "../../public/images/bajka.jpg";
-import festyn from "../../public/images/festyn.jpg";
-import integracja from "../../public/images/integracja.jpg";
-import przedszkole from "../../public/images/przedszkole-wspolpraca.jpg";
-import zajecia from "../../public/images/zajecia-manualne.jpg";
+import koncert from "../assets/images/koncert.jpg";
+import bajka from "../assets/images/bajka.jpg";
+import festyn from "../assets/images/festyn.jpg";
+import integracja from "../assets/images/integracja.jpg";
+import przedszkole from "../assets/images/przedszkole-wspolpraca.jpg";
+import zajecia from "../assets/images/zajecia-manualne.jpg";
 ---
 
 <Layout
   title="Agencja Artystyczna Pro Arte"
+  description="Profesjonalna oprawa artystyczna imprez dla dzieci – koncerty autorskie, muzyczne bajki, imprezy integracyjne i festyny. Działamy od 2017 roku w okolicach Wołomina."
 >
   <!-- Hero Section -->
   <section class="hero">
@@ -117,7 +119,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
   </section>
 
   <!-- Artyści Section -->
-  <section id="artyści" class="artysci">
+  <section id="artysci" class="artysci">
     <div class="container">
       <h2 class="section-title">Nasi Artyści</h2>
       <p class="section-subtitle">
@@ -204,6 +206,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
               height={600}
               src={bajka}
               alt="Muzyczna bajka"
+              loading="lazy"
             />
           </div>
           <p>Muzyczna bajka</p>
@@ -215,6 +218,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
               height={600}
               src={festyn}
               alt="Festyn szkolny"
+              loading="lazy"
             />
           </div>
           <p>Festyn szkolny</p>
@@ -226,6 +230,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
               height={600}
               src={integracja}
               alt="Impreza integracyjna"
+              loading="lazy"
             />
           </div>
           <p>Impreza integracyjna</p>
@@ -237,6 +242,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
               height={600}
               src={przedszkole}
               alt="Występ dla przedszkolaków"
+              loading="lazy"
             />
           </div>
           <p>Występ dla przedszkolaków</p>
@@ -248,6 +254,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
               height={600}
               src={zajecia}
               alt="Zajęcia manualne"
+              loading="lazy"
             />
           </div>
           <p>Zajęcia manualne</p>
@@ -351,81 +358,82 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
             <span class="contact-icon">📧</span>
             <div>
               <strong>Email</strong>
-              <p>proarte.krzysztofstepien@gmail.com</p>
+              <p><a href={`mailto:${email}`}>{email}</a></p>
             </div>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📱</span>
             <div>
               <strong>Telefon</strong>
-              <p>+48 602 452 314</p>
+              <p><a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a></p>
             </div>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📍</span>
             <div>
               <strong>Adres</strong>
-              <p>ul. Matejki 30, Wołomin<br />05-200 Wołomin</p>
+              <p>{addressStreet}, {addressCity}<br />{addressPostal} {addressCity}</p>
             </div>
           </div>
           <div class="contact-item">
             <span class="contact-icon">⏰</span>
             <div>
               <strong>Godziny pracy</strong>
-              <p>Pn-Pt: 9:00 - 17:00</p>
+              <p>{hours}</p>
             </div>
           </div>
         </div>
 
-        <form
-          action="https://formspree.io/f/xrekzrnq"
-          method="POST"
-          class="contact-form"
-        >
-          <div class="form-group">
-            <label for="name">Imię i nazwisko *</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="organization">Nazwa placówki/firmy *</label>
-            <input type="text" id="organization" name="organization" required />
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Telefon</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="event-type">Rodzaj imprezy</label>
-            <select id="event-type" name="event-type">
-              <option value="">Wybierz...</option>
-              <option value="concert">Koncert autorski</option>
-              <option value="fairytale">Muzyczna bajka</option>
-              <option value="integration">Impreza integracyjna</option>
-              <option value="festival">Festyn</option>
-              <option value="other">Inne</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Wiadomość *</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Wyślij wiadomość</button
+        <div class="contact-form-wrapper">
+          <form
+            action="https://formspree.io/f/xrekzrnq"
+            method="POST"
+            class="contact-form"
           >
-        </form>
-        <div id="thank-you-message" class="thank-you-message">
-          Dziękujemy za kontakt! Odezwę się wkrótce.
+            <div class="form-group">
+              <label for="name">Imię i nazwisko *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="organization">Nazwa placówki/firmy *</label>
+              <input type="text" id="organization" name="organization" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="event-type">Rodzaj imprezy</label>
+              <select id="event-type" name="event-type">
+                <option value="">Wybierz...</option>
+                <option value="concert">Koncert autorski</option>
+                <option value="fairytale">Muzyczna bajka</option>
+                <option value="integration">Impreza integracyjna</option>
+                <option value="festival">Festyn</option>
+                <option value="other">Inne</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Wiadomość *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+          </form>
+          <div id="thank-you-message" class="thank-you-message" hidden>
+            Dziękujemy za kontakt! Odezwiemy się wkrótce.
+          </div>
         </div>
       </div>
     </div>
@@ -709,28 +717,10 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
     box-shadow: var(--shadow-lg);
   }
 
-  .gallery-item .placeholder-image {
-    width: 100%;
-    height: 300px;
-    background: linear-gradient(
-      135deg,
-      var(--color-accent) 0%,
-      var(--color-secondary) 100%
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-  }
-
-  .gallery-item .placeholder-image.large {
-    height: 350px;
-  }
-
   .gallery-image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3; /* ustalasz proporcje wszystkich obrazków */
+    aspect-ratio: 4/3;
     overflow: hidden;
   }
 
@@ -893,6 +883,19 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
     color: var(--color-text-light);
   }
 
+  .contact-item a {
+    color: var(--color-text-light);
+  }
+
+  .contact-item a:hover {
+    color: var(--color-primary);
+  }
+
+  .contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .contact-form {
     background: white;
     padding: var(--spacing-lg);
@@ -926,7 +929,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
     border-radius: var(--radius-sm);
     font-family: var(--font-body);
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   input:focus,
@@ -934,7 +937,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
   textarea:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.1);
+    box-shadow: 0 0 0 3px rgba(117, 184, 159, 0.3);
   }
 
   textarea {
@@ -947,10 +950,15 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
   }
 
   .thank-you-message {
-    display: none;
-    margin-top: 20px;
-    color: green;
-    font-weight: bold;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   /* Responsive */
@@ -996,7 +1004,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
     }
     .contact-item {
       flex-direction: column;
-      gap: 0.25rem; /* mniejszy odstęp w kolumnie */
+      gap: 0.25rem;
     }
 
     .contact-item span.contact-icon {
@@ -1004,7 +1012,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
     }
 
     .contact-item div {
-      word-break: break-word; /* długie numery czy emaile nie wyjdą poza box */
+      word-break: break-word;
     }
   }
 </style>
@@ -1013,7 +1021,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
   // Animacja liczb
   const animateNumbers = () => {
     const statNumbers = document.querySelectorAll(".stat-number[data-target]");
-    
+
     statNumbers.forEach((element) => {
       const target = parseInt(element.getAttribute("data-target") || "0");
       let current = 0;
@@ -1042,19 +1050,17 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
     });
   };
 
-  // Trigger animacji gdy sekcja jest widoczna
-  const observerOptions = {
-    threshold: 0.5,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateNumbers();
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateNumbers();
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
   const heroStats = document.querySelector(".hero-stats");
   if (heroStats) {
@@ -1082,7 +1088,7 @@ import zajecia from "../../public/images/zajecia-manualne.jpg";
 
         if (response.ok) {
           form.style.display = "none";
-          if (thankYouMessage) thankYouMessage.style.display = "block";
+          if (thankYouMessage) thankYouMessage.removeAttribute("hidden");
         } else {
           alert("Ups! Coś poszło nie tak, spróbuj ponownie.");
         }
